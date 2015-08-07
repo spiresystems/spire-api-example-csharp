@@ -12,13 +12,14 @@ Instantiate an API client with a company name, username, and password:
 
 ```C#
 var client = new ApiClient("test", "username", "password");
-var inventory_client = new InventoryClient(client);
 ```
 
 Create a new inventory item:
 
 ```C#
-Inventory inventory = new Inventory();
+var inventory_client = new InventoryClient(client);
+
+var inventory = new Inventory();
 inventory.whse = "00";
 inventory.partNo = "TESTPART";
 inventory.type = InventoryType.Normal;
