@@ -37,7 +37,7 @@ foreach (var i in inventory_client.List(0, 100, "TEST"))
 }
 ```
 
-Retreive an inventory item by ID:
+Retrieve an inventory item by ID:
 
 ```C#
 inventory = inventory_client.Fetch(inventory.id);
