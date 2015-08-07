@@ -116,7 +116,7 @@ namespace ApiTest
         /// </summary>
         /// <param name="start">Start offset in list</param>
         /// <param name="limit">Limit objects returned; defaults to 100</param>
-        /// <param name="q">Search string</param>
+        /// <param name="query">Search string</param>
         /// <param name="filter">Filter criteria</param>
         /// <returns></returns>
         public List<T> List(int start=0, int limit=100, string query=null, object filter=null)
