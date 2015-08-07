@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is intends to provide example usage of the Spire REST API using
+This project intends to provide example usage of the Spire REST API using
 Microsoft .NET Framework 4.6. The project will build and run as is, and can be
 modified to suit your own requirements.
 
