@@ -17,7 +17,7 @@ var client = new ApiClient("test", "username", "password");
 Create a new inventory item:
 
 ```C#
-var inventory_client = new InventoryClient(client);
+var inventoryClient = new InventoryClient(client);
 
 var inventory = new Inventory();
 inventory.whse = "00";
@@ -25,13 +25,13 @@ inventory.partNo = "TESTPART";
 inventory.type = InventoryType.Normal;
 inventory.status = InventoryStatus.Active;
 inventory.description = "Test Inventory";
-inventory = inventory_client.Create(inventory);
+inventory = inventoryClient.Create(inventory);
 ```
 
 List inventory matching the query "TEST":
 
 ```C#
-foreach (var i in inventory_client.List(0, 100, "TEST"))
+foreach (var i in inventoryClient.List(0, 100, "TEST"))
 {
     Console.WriteLine(i.partNo);
 }
@@ -40,21 +40,21 @@ foreach (var i in inventory_client.List(0, 100, "TEST"))
 Retrieve an inventory item by ID:
 
 ```C#
-inventory = inventory_client.Fetch(inventory.id);
+inventory = inventoryClient.Fetch(inventory.id);
 ```
 
 Update a field on an existing inventory item:
 
 ```C#
 inventory.description = "New Description";
-inventory_client.Update(inventory.id, inventory);
+inventoryClient.Update(inventory.id, inventory);
 ```
 
 Delete an inventory item (if inventory is in use this will throw an
 `ApiException`):
 
 ```C#
-inventory_client.Delete(inventory.id);
+inventoryClient.Delete(inventory.id);
 ```
 
 

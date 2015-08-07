@@ -78,11 +78,11 @@ namespace ApiTest
                 {
                     if (p.Name == "Location")
                     {
-                        var second_request = new RestRequest();
+                        var secondRequest = new RestRequest();
                         var location = (string)p.Value;
-                        second_request.Resource = location.Remove(0,
+                        secondRequest.Resource = location.Remove(0,
                             _client.BaseUrl.ToString().Length);
-                        return Execute<T>(second_request);
+                        return Execute<T>(secondRequest);
                     }
                 }
             }
@@ -134,8 +134,8 @@ namespace ApiTest
 
             if (filter != null)
             {
-                string json_filter = JsonConvert.SerializeObject(filter);
-                request.AddQueryParameter("filter", json_filter);
+                string jsonFilter = JsonConvert.SerializeObject(filter);
+                request.AddQueryParameter("filter", jsonFilter);
             }
 
             request.RequestFormat = DataFormat.Json;
