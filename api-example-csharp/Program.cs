@@ -26,13 +26,13 @@ namespace ApiTest
                 inventory = inventory_client.Create(inventory);
 
                 // List inventory
-                foreach (var i in inventory_client.List<Inventory>())
+                foreach (var i in inventory_client.List())
                 {
                     // i.id
                 }
 
                 // Get inventory
-                inventory = inventory_client.Fetch<Inventory>(inventory.id);
+                inventory = inventory_client.Fetch(inventory.id);
 
                 // Update inventory
                 inventory.description = "New Description";

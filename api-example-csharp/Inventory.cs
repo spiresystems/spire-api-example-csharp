@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 
 namespace ApiTest
@@ -46,7 +45,7 @@ namespace ApiTest
         }
 
 
-        public class InventoryClient : BaseObjectClient
+        public class InventoryClient : BaseObjectClient<Inventory>
         {
             public InventoryClient(ApiClient client) : base(client) { }
 

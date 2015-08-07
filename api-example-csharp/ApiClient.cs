@@ -79,7 +79,7 @@ namespace ApiTest
     }
 
 
-    public abstract class BaseObjectClient
+    public abstract class BaseObjectClient<T> where T : new()
     {
         protected ApiClient Client;
 
@@ -98,7 +98,7 @@ namespace ApiTest
 
         abstract public string Resource { get; }
 
-        public List<T> List<T>()
+        public List<T> List()
         {
             var request = new RestRequest();
             request.RequestFormat = DataFormat.Json;
@@ -107,7 +107,7 @@ namespace ApiTest
             return Client.Execute<List<T>>(request);
         }
 
-        public T Fetch<T>(int id) where T : new()
+        public T Fetch(int id)
         {
             var request = new RestRequest();
             request.RequestFormat = DataFormat.Json;
@@ -115,7 +115,7 @@ namespace ApiTest
             return Client.Execute<T>(request);
         }
 
-        public T Create<T>(T obj) where T : new()
+        public T Create(T obj)
         {
             var request = new RestRequest(Method.POST);
             request.RequestFormat = DataFormat.Json;
@@ -124,7 +124,7 @@ namespace ApiTest
             return Client.Execute<T>(request);
         }
 
-        public T Update<T>(int id, T obj) where T : new()
+        public T Update(int id, T obj)
         {
             var request = new RestRequest(Method.PUT);
             request.RequestFormat = DataFormat.Json;
