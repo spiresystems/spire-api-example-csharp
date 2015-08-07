@@ -25,8 +25,8 @@ namespace ApiTest
                 inventory.description = "Test Inventory";
                 inventory = inventory_client.Create(inventory);
 
-                // List inventory
-                foreach (var i in inventory_client.List())
+                // List inventory matching the query "TEST"
+                foreach (var i in inventory_client.List(0, 100, "TEST"))
                 {
                     // i.id
                 }
