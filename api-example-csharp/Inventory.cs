@@ -12,19 +12,19 @@ namespace ApiTest.InventoryApi
 
     public sealed class InventoryStatus
     {
-        public static string Active = "active";
-        public static string OnHold = "onhold";
-        public static string Inactive = "inactive";
+        public static string Active = 0;
+        public static string OnHold = 1;
+        public static string Inactive = 2;
     }
 
 
     public sealed class InventoryType
     {
-        public static string Normal = "normal";
-        public static string NonPhysical = "nonPhysical";
-        public static string Manufactured = "manufactured";
-        public static string Kitted = "kitted";
-        public static string RawMaterial = "rawMaterial";
+        public static string Normal = "N";
+        public static string NonPhysical = "V";
+        public static string Manufactured = "M";
+        public static string Kitted = "K";
+        public static string RawMaterial = "R";
     }
 
 
