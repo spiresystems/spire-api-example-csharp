@@ -12,9 +12,9 @@ namespace ApiTest.InventoryApi
 
     public sealed class InventoryStatus
     {
-        public static string Active = 0;
-        public static string OnHold = 1;
-        public static string Inactive = 2;
+        public static int Active = 0;
+        public static int OnHold = 1;
+        public static int Inactive = 2;
     }
 
 
@@ -35,7 +35,7 @@ namespace ApiTest.InventoryApi
         public string whse { get; set; }
         public string description { get; set; }
         public string type { get; set; }
-        public string status { get; set; }
+        public int status { get; set; }
         public decimal onHandQty { get; set; }
         public decimal committedQty { get; set; }
         public decimal backorderQty { get; set; }
